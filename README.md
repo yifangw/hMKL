@@ -4,14 +4,14 @@ we propose a hierarchical multi-kernel learning (hMKL) approach, a novel cancer 
 # Installation
 Before using the hMKL method, several dependent packages need to be downloaded and installed in advance:<br>
 ```
-install.packages("SIMLR")<br>
-install.packages("dplyr")<br>
-install.packages("parallel")<br>
-install.packages("Matrix")<br>
-install.packages("MASS")<br>
-install.packages("mixKernel")<br>
-install.packages("quadprog")<br>
-install.packages("psych")<br>
+install.packages("SIMLR")
+install.packages("dplyr")
+install.packages("parallel")
+install.packages("Matrix")
+install.packages("MASS")
+install.packages("mixKernel")
+install.packages("quadprog")
+install.packages("psych")
 ```
 
 # Example
