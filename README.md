@@ -26,8 +26,109 @@ data <- exampledata
 #StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
 
 mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)
+
+Computing the multiple Kernels.
+Performing network diffiusion.
+Iteration:  1 
+Iteration:  2 
+Iteration:  3 
+Iteration:  4 
+Iteration:  5 
+Iteration:  6 
+Iteration:  7 
+Iteration:  8 
+Iteration:  9 
+Iteration:  10 
+Iteration:  11 
+Iteration:  12 
+Iteration:  13 
+Iteration:  14 
+Iteration:  15 
+Iteration:  16 
+Iteration:  17 
+Iteration:  18 
+Iteration:  19 
+Iteration:  20 
+Iteration:  21 
+Iteration:  22 
+Iteration:  23 
+Iteration:  24 
+Iteration:  25 
+Iteration:  26 
+Iteration:  27 
+Iteration:  28 
+Iteration:  29 
+Iteration:  30 
+
 miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) 
+
+Computing the multiple Kernels.
+Performing network diffiusion.
+Iteration:  1 
+Iteration:  2 
+Iteration:  3 
+Iteration:  4 
+Iteration:  5 
+Iteration:  6 
+Iteration:  7 
+Iteration:  8 
+Iteration:  9 
+Iteration:  10 
+Iteration:  11 
+Iteration:  12 
+Iteration:  13 
+Iteration:  14 
+Iteration:  15 
+Iteration:  16 
+Iteration:  17 
+Iteration:  18 
+Iteration:  19 
+Iteration:  20 
+Iteration:  21 
+Iteration:  22 
+Iteration:  23 
+Iteration:  24 
+Iteration:  25 
+Iteration:  26 
+Iteration:  27 
+Iteration:  28 
+Iteration:  29 
+Iteration:  30 
+
 methy_noc <- CIMLR_noc(data[[3]],cores.ratio = 0)
+
+Computing the multiple Kernels.
+Performing network diffiusion.
+Iteration:  1 
+Iteration:  2 
+Iteration:  3 
+Iteration:  4 
+Iteration:  5 
+Iteration:  6 
+Iteration:  7 
+Iteration:  8 
+Iteration:  9 
+Iteration:  10 
+Iteration:  11 
+Iteration:  12 
+Iteration:  13 
+Iteration:  14 
+Iteration:  15 
+Iteration:  16 
+Iteration:  17 
+Iteration:  18 
+Iteration:  19 
+Iteration:  20 
+Iteration:  21 
+Iteration:  22 
+Iteration:  23 
+Iteration:  24 
+Iteration:  25 
+Iteration:  26 
+Iteration:  27 
+Iteration:  28 
+Iteration:  29 
+Iteration:  30 
 
 Ss_mRNA_noc <- mRNA_noc$S
 Ss_miRNA_noc <- miRNA_noc$S
