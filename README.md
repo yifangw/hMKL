@@ -2,22 +2,22 @@
 we propose a hierarchical multi-kernel learning (hMKL) approach, a novel cancer molecular subtyping method that adopts a two-stage kernel learning strategy to identify cancer subtypes. In stage 1, we obtain a composite kernel borrowing the cancer integration via multi-kernel learning (CIMLR) idea by optimizing the kernel parameters for individual omics data type. In stage 2, we obtain a final fused kernel through a weighted linear combination of individual kernels learned from stage 1 using an unsupervised multiple kernel learning (UMKL) method. Based on the final fusion kernel, k-means clustering is applied to identify cancer subtypes.
 
 # Installation
-Before using the hMKL method, several dependent packages need to be downloaded and installed in advance:
-install.packages("SIMLR")
-install.packages("dplyr")
-install.packages("parallel")
-install.packages("Matrix")
-install.packages("MASS")
-install.packages("mixKernel")
-install.packages("quadprog")
-install.packages("psych")
+Before using the hMKL method, several dependent packages need to be downloaded and installed in advance:<br>
+install.packages("SIMLR")<br>
+install.packages("dplyr")<br>
+install.packages("parallel")<br>
+install.packages("Matrix")<br>
+install.packages("MASS")<br>
+install.packages("mixKernel")<br>
+install.packages("quadprog")<br>
+install.packages("psych")<br>
 
 # Example
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem:<br>
+<br>
+data <- exampledata<br>
 
-data <- exampledata
-
-# StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
+#StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework<br>
 mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)
 miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) 
 methy_noc <- CIMLR_noc(data[[3]],cores.ratio = 0)
