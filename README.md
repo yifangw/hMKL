@@ -3,6 +3,7 @@ we propose a hierarchical multi-kernel learning (hMKL) approach, a novel cancer 
 
 # Installation
 Before using the hMKL method, several dependent packages need to be downloaded and installed in advance:<br>
+```
 install.packages("SIMLR")<br>
 install.packages("dplyr")<br>
 install.packages("parallel")<br>
@@ -11,13 +12,14 @@ install.packages("MASS")<br>
 install.packages("mixKernel")<br>
 install.packages("quadprog")<br>
 install.packages("psych")<br>
+```
 
 # Example
 This is a basic example which shows you how to solve a common problem:<br>
 <br>
 data <- exampledata<br>
 <br>
-#StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework<br>
+#```StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework<br>
 <br>
 mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)<br>
 miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) <br>
@@ -27,7 +29,7 @@ methy_noc <- CIMLR_noc(data[[3]],cores.ratio = 0)<br>
 Ss_mRNA_noc <- mRNA_noc$S<br>
 Ss_miRNA_noc <- miRNA_noc$S<br>
 Ss_methy_noc <- methy_noc$S<br>
-
+```
 #Stage 2: Obtain the final weighted similarity matrix by UMKL
 set_input <- function(kernel_mat)
 {
