@@ -17,18 +17,21 @@ install.packages("psych")
 # Example
 This is a basic example which shows you how to solve a common problem:<br>
 <br>
-data <- exampledata<br>
-<br>
-#```StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework<br>
-<br>
-mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)<br>
-miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) <br>
-methy_noc <- CIMLR_noc(data[[3]],cores.ratio = 0)<br>
-<br>
-<br>
-Ss_mRNA_noc <- mRNA_noc$S<br>
-Ss_miRNA_noc <- miRNA_noc$S<br>
-Ss_methy_noc <- methy_noc$S<br>
+```
+data <- exampledata
+```
+
+```
+#StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
+
+mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)
+miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) 
+methy_noc <- CIMLR_noc(data[[3]],cores.ratio = 0)
+
+Ss_mRNA_noc <- mRNA_noc$S
+Ss_miRNA_noc <- miRNA_noc$S
+Ss_methy_noc <- methy_noc$S
+```
 ```
 #Stage 2: Obtain the final weighted similarity matrix by UMKL
 set_input <- function(kernel_mat)
@@ -46,14 +49,17 @@ methy_kernel_noc <- set_input(Ss_methy_noc)
 
 meta.kernel_sparse_noc <- combine.kernels2(x = mRNA_kernel_noc,y = miRNA_kernel_noc,z = methy_kernel_noc,
                                            method = "sparse-UMKL", scale=F)
-
-## estimate the optimal number of groups
+```
+```
+# estimate the optimal number of groups
 NUMC = 2:5
 res = SIMLR_Estimate_Clusters_W(meta.kernel_sparse_noc$kernel, NUMC = NUMC)
 full_K1= NUMC[which.min(res$K1)]
 full_K2= NUMC[which.min(res$K2)]
-
+```
+```
 # perform K-means clustering
 group_sparse_kmeans_noc = kmeans(meta.kernel_sparse_noc$kernel,full_K1,nstart = 30) 
 group_sparse_kmeans <- group_sparse_kmeans_noc$cluster
 group_sparse_kmeans
+```
