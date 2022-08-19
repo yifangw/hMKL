@@ -23,7 +23,7 @@ data <- exampledata
 
 ```java
 
-```#StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
+#StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
 
 mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)
 miRNA_noc <- CIMLR_noc(data[[2]],cores.ratio = 0) 
