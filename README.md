@@ -22,6 +22,7 @@ data <- exampledata
 ```
 
 ```
+
 #StageⅠ： Optimize kernel parameters for each omics data type under the CIMLR framework
 
 mRNA_noc <- CIMLR_noc(data[[1]],cores.ratio = 0)
